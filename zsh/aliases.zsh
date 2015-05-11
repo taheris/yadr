@@ -56,6 +56,7 @@ alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
 mvim --version > /dev/null 2>&1
 MACVIM_INSTALLED=$?
 if [ $MACVIM_INSTALLED -eq 0 ]; then
+  alias vi="mvim -v"
   alias vim="mvim -v"
 fi
 
