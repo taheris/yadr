@@ -33,10 +33,10 @@ alias df='df -h'
 alias du='du -h -d 2'
 
 if [[ $platform == 'linux' ]]; then
-  alias ll='ls -alh --color=auto'
+  alias ll='ls -lh --color=auto'
   alias ls='ls --color=auto'
 elif [[ $platform == 'darwin' ]]; then
-  alias ll='ls -alGh'
+  alias ll='ls -lGh --color'
   alias ls='ls -Gh'
 fi
 
@@ -211,3 +211,7 @@ alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
+
+# mine
+alias ec='emacsclient -c'
+alias et='emacsclient -t'

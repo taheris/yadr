@@ -1,0 +1,2 @@
+#!/bin/bash
+docker inspect $1 | grep IPAddress | awk '{print $2}' | tr -d '",\n'
