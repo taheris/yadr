@@ -131,6 +131,7 @@ alias gt='git t'
 alias gbg='git bisect good'
 alias gbb='git bisect bad'
 alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias gbl='git blame'
 
 # Common shell functions
 alias less='less -r'
@@ -213,6 +214,96 @@ alias dbmu='spring rake db:migrate:up'
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
 
-# mine
+## mine
+
+# misc
 alias ec='emacsclient -c'
 alias et='emacsclient -t'
+alias sedi="sed -i ''"
+alias digs='dig +short'
+alias htop='sudo htop'
+alias git=hub
+alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
+alias op='cd $GOPATH/src/github.com/optiopay'
+
+# go
+alias gog='go generate'
+alias got='go test'
+alias goti='go test -tags=integration'
+alias gotr='go test ./...'
+alias gob='go test -run=NONE -bench=.'
+
+# docker
+alias dr='docker run --rm'
+alias drit='docker run --interactive --tty --rm'
+alias dst='docker start'
+alias dsp='docker stop'
+alias dps='docker ps'
+alias dpsa='docker ps --all'
+alias dim='docker images'
+alias dima='docker images --all'
+alias db='docker build --force-rm'
+alias dbt='docker build --force-rm --tag'
+alias dp='docker push'
+alias ddf='docker diff'
+alias dx='docker exec'
+alias dk='docker kill'
+alias dl='docker logs'
+alias dt='docker tag'
+alias drm='docker rm'
+alias drmi='docker rmi'
+
+# docker-machine
+alias dm='docker-machine'
+alias dmst='docker-machine start'
+alias dmstd='docker-machine start docker'
+alias dmsp='docker-machine stop'
+alias dmspd='docker-machine stop docker'
+alias dmssh='docker-machine ssh'
+alias dmsshd='docker-machine ssh docker'
+alias dmu='docker-machine upgrade'
+alias dmud='docker-machine upgrade docker'
+
+# fleetctl
+alias fclu='fleetctl list-units'
+alias fclm='fleetctl list-machines'
+alias fcluf='fleetctl list-unit-files'
+alias fcs='fleetctl status'
+alias fcj='fleetctl journal'
+alias fcjf='fleetctl journal -f'
+alias fcd='fleetctl destroy'
+alias fcc='fleetctl cat'
+alias fcst='fleetctl start'
+alias fcsp='fleetctl stop'
+alias fcssh='fleetctl ssh'
+
+# pipe
+alias -g X='| xargs'
+alias -g GV='| grep -v'
+
+# awk
+alias -g A1='| awk '"'"'{print $1}'"'"''
+alias -g A2='| awk '"'"'{print $2}'"'"''
+alias -g A3='| awk '"'"'{print $3}'"'"''
+alias -g A4='| awk '"'"'{print $4}'"'"''
+alias -g A5='| awk '"'"'{print $5}'"'"''
+alias -g A6='| awk '"'"'{print $6}'"'"''
+alias -g A7='| awk '"'"'{print $7}'"'"''
+alias -g A8='| awk '"'"'{print $8}'"'"''
+alias -g A9='| awk '"'"'{print $9}'"'"''
+
+# vagrant
+alias vb='vagrant box'
+alias vd='vagrant destroy'
+alias vdf='vagrant destroy --force'
+alias vgs='vagrant global-status'
+alias vh='vagrant halt'
+alias vhf='vagrant halt --force'
+alias vr='vagrant resume'
+alias vss='vagrant snapshot'
+alias vsst='vagrant snapshot take'
+alias vssg='vagrant snapshot go'
+alias vssl='vagrant snapshot list'
+alias vssh='vagrant ssh'
+alias vs='vagrant status'
+alias vu='vagrant up'
