@@ -229,8 +229,11 @@ alias op='cd $GOPATH/src/github.com/optiopay'
 # go
 alias gog='go generate'
 alias got='go test'
+alias gotv='go test -v'
 alias goti='go test -tags=integration'
+alias gotiv='go test -tags=integration -v'
 alias gotr='go test ./...'
+alias gotrv='go test ./... -v'
 alias gob='go test -run=NONE -bench=.'
 
 # docker
