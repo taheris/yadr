@@ -56,7 +56,7 @@ alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
 mvim --version > /dev/null 2>&1
 MACVIM_INSTALLED=$?
 if [ $MACVIM_INSTALLED -eq 0 ]; then
-  alias vi="mvim -v"
+  alias vi="vim -v"
   alias vim="mvim -v"
 fi
 
@@ -225,6 +225,7 @@ alias htop='sudo htop'
 alias git=hub
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias op='cd $GOPATH/src/github.com/optiopay'
+alias ats='cd $HOME/code/github.com/advancedtelematic'
 
 # go
 alias gog='go generate'
@@ -253,10 +254,16 @@ alias ddf='docker diff'
 alias dx='docker exec'
 alias dxit='docker exec --interactive --tty'
 alias dk='docker kill'
-alias dl='docker logs'
+alias dlg='docker logs'
+alias dlgf='docker logs --follow'
 alias dt='docker tag'
 alias drm='docker rm'
+alias drmf='docker rm --force'
 alias drmi='docker rmi'
+alias dhi='docker history'
+alias dcr='docker create'
+alias dcrcc='docker create --name cargo-cache --volume /cargo tianon/true /bin/true'
+alias dritc='docker run --interactive --tty --rm --env CARGO_HOME=/cargo --volumes-from cargo-cache'
 
 # docker-machine
 alias dm='docker-machine'
@@ -268,6 +275,11 @@ alias dmssh='docker-machine ssh'
 alias dmsshd='docker-machine ssh docker'
 alias dmu='docker-machine upgrade'
 alias dmud='docker-machine upgrade docker'
+alias dmip='docker-machine ip'
+alias dmipd='docker-machine ip docker'
+
+# docker-compose
+alias dc='docker-compose'
 
 # fleetctl
 alias fclu='fleetctl list-units'
@@ -285,6 +297,7 @@ alias fcssh='fleetctl ssh'
 # pipe
 alias -g X='| xargs'
 alias -g GV='| grep -v'
+alias -g PP='| jq'
 
 # awk
 alias -g A1='| awk '"'"'{print $1}'"'"''
