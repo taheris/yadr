@@ -67,7 +67,10 @@ alias :q='exit'
 alias ve='vim ~/.vimrc'
 
 # zsh profile editing
-alias ze='vim ~/.zshrc'
+alias zre='vim ~/.zshrc'
+alias zrr='source ~/.zshrc'
+alias zee='vim ~/.zshenv'
+alias zer='source ~/.zshrc'
 
 # Git Aliases
 alias gs='git status'
@@ -222,12 +225,17 @@ alias et='emacsclient -t'
 alias sedi="sed -i ''"
 alias digs='dig +short'
 alias htop='sudo htop'
-alias git=hub
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
-alias op='cd $GOPATH/src/github.com/optiopay'
+
+# functions
+alias gcl='github-clone'
+alias agb='ag-boundary'
+
+# paths
 alias ats='cd $HOME/code/github.com/advancedtelematic'
 
 # go
+alias gor='go run'
 alias gog='go generate'
 alias got='go test'
 alias gotv='go test -v'
@@ -262,8 +270,10 @@ alias drmf='docker rm --force'
 alias drmi='docker rmi'
 alias dhi='docker history'
 alias dcr='docker create'
-alias dcrcc='docker create --name cargo-cache --volume /cargo tianon/true /bin/true'
-alias dritc='docker run --interactive --tty --rm --env CARGO_HOME=/cargo --volumes-from cargo-cache'
+
+# docker bind mounts
+alias dritc='docker run --rm -it -e CARGO_HOME=/cargo -v ~/.cargo:/cargo'
+alias dritc='docker run --rm -it -e CARGO_HOME=/cargo -v ~/.cargo:/cargo -v $PWD:/build'
 
 # docker-machine
 alias dm='docker-machine'
