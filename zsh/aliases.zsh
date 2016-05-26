@@ -228,7 +228,8 @@ alias htop='sudo htop'
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
 # functions
-alias gcl='github-clone'
+alias gcl='git clone'
+alias ghcl='github-clone'
 alias agb='ag-boundary'
 
 # paths
