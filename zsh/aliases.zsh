@@ -305,6 +305,7 @@ alias fcssh='fleetctl ssh'
 alias -g X='| xargs'
 alias -g GV='| grep -v'
 alias -g PP='| jq'
+alias -g T='| tail -n +2'
 
 # awk
 alias -g A1='| awk '"'"'{print $1}'"'"''
