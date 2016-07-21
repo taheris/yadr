@@ -226,6 +226,8 @@ alias sedi="sed -i ''"
 alias digs='dig +short'
 alias htop='sudo htop'
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
+alias gcaf='git commit --all --amend --reuse-message HEAD'
+alias gcafpf='gcaf && git push --force'
 
 # functions
 alias gcl='git clone'
@@ -233,7 +235,8 @@ alias ghcl='github-clone'
 alias agb='ag-boundary'
 
 # paths
-alias ats='cd $HOME/code/github.com/advancedtelematic'
+alias ats='cd $HOME/src/github.com/advancedtelematic'
+alias taheris='cd $HOME/src/github.com/taheris'
 
 # go
 alias gor='go run'
@@ -364,6 +367,7 @@ alias ruta='rustup target'
 alias rutal='rustup target list'
 alias rutaa='rustup target add'
 alias rutar='rustup target remove'
+alias ruo='rustup override'
 alias ruol='rustup override list'
 alias ruos='rustup override set'
 alias ruou='rustup override unset'
