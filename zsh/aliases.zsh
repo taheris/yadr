@@ -375,3 +375,11 @@ alias rur='rustup run'
 alias ruw='rustup which'
 alias rud='rustup doc'
 alias ruh='rustup help'
+
+# ota-integration-builder
+alias oib='$HOME/src/github.com/advancedtelematic/pro/tools/ota-integration-builder/ota-builder.py'
+alias oibh='oib --help'
+alias oibpl='oib --pull'
+alias oibst='oib --start'
+alias oibsp='oib --stop'
+alias oibdr='oib --dry-run'
