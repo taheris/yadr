@@ -305,7 +305,7 @@ alias fcsp='fleetctl stop'
 alias fcssh='fleetctl ssh'
 
 # pipe
-alias -g X='| xargs'
+alias -g X='| xargs '
 alias -g GV='| grep -v'
 alias -g PP='| jq'
 alias -g T='| tail -n +2'
