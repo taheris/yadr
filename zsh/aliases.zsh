@@ -229,9 +229,19 @@ alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gcaf='git commit --all --amend --reuse-message HEAD'
 alias gcafpf='gcaf && git push --force'
 
+# git
+alias gstl='git stash list'
+alias gsts='git stash save'
+alias gstp='git stash pop'
+alias gsta='git stash apply'
+alias gstd='git stash drop'
+alias gstsh='git stash show'
+alias gstcl='git stash clear'
+
 # functions
 alias gcl='git clone'
 alias ghcl='github-clone'
+alias ag='ag -f'
 alias agb='ag-boundary'
 
 # paths
