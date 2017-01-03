@@ -228,6 +228,7 @@ alias htop='sudo htop'
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gcaf='git commit --all --amend --reuse-message HEAD'
 alias gcafpf='gcaf && git push --force'
+alias dark='osascript -e '"'"'tell application "System Events" to sleep'"'"''
 
 # git
 alias gstl='git stash list'
@@ -318,6 +319,7 @@ alias fcssh='fleetctl ssh'
 
 # pipe
 alias -g X='| xargs '
+alias -g XI='| xargs -I{} '
 alias -g GV='| grep -v'
 alias -g PP='| jq'
 alias -g T='| tail -n +2'
