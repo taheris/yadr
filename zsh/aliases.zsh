@@ -324,6 +324,9 @@ alias -g GV='| grep -v'
 alias -g PP='| jq'
 alias -g T='| tail -n +2'
 alias -g OC='| openssl s_client -ign_eof -connect'
+alias -g N='>/dev/null'
+alias -g EN='2>/dev/null'
+alias -g EO='2>&1'
 
 # awk
 alias -g A1='| awk '"'"'{print $1}'"'"''
