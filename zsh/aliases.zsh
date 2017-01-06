@@ -323,6 +323,7 @@ alias -g XI='| xargs -I{} '
 alias -g GV='| grep -v'
 alias -g PP='| jq'
 alias -g T='| tail -n +2'
+alias -g OC='| openssl s_client -ign_eof -connect'
 
 # awk
 alias -g A1='| awk '"'"'{print $1}'"'"''
