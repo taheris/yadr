@@ -229,6 +229,7 @@ alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gcaf='git commit --all --amend --reuse-message HEAD'
 alias gcafpf='gcaf && git push --force'
 alias dark='osascript -e '"'"'tell application "System Events" to sleep'"'"''
+alias genpw='LC_ALL=C tr -dc "[:alpha:][:alnum:]" < /dev/urandom | head -c'
 
 # git
 alias gstl='git stash list'
@@ -238,6 +239,7 @@ alias gsta='git stash apply'
 alias gstd='git stash drop'
 alias gstsh='git stash show'
 alias gstcl='git stash clear'
+alias gcad='git commit --amend --date="now"'
 
 # functions
 alias gcl='git clone'
