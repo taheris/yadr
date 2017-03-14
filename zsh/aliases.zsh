@@ -318,13 +318,15 @@ alias fcssh='fleetctl ssh'
 
 # pipe
 alias -g X='| xargs '
-alias -g C='| xargs echo -n | pbcopy '
 alias -g XI='| xargs -I{} '
-alias -g GV='| grep -v'
-alias -g PP='| jq'
+alias -g C='| xargs echo -n | pbcopy '
+alias -g S='| sort '
+alias -g U='| uniq '
+alias -g H='| head '
 alias -g T='| tail -n +2'
 alias -g OC='| openssl s_client -ign_eof -connect'
 alias -g N='>/dev/null'
+alias -g ON='1>/dev/null'
 alias -g EN='2>/dev/null'
 alias -g EO='2>&1'
 
