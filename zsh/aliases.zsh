@@ -241,6 +241,7 @@ alias gstsh='git stash show'
 alias gstcl='git stash clear'
 alias gcad='git commit --amend --date="now"'
 alias gcl='git clone'
+alias grp='git rev-parse HEAD'
 alias ghcl='github-clone'
 
 # paths
@@ -317,6 +318,7 @@ alias fcssh='fleetctl ssh'
 
 # pipe
 alias -g X='| xargs '
+alias -g C='| xargs echo -n | pbcopy '
 alias -g XI='| xargs -I{} '
 alias -g GV='| grep -v'
 alias -g PP='| jq'
