@@ -433,3 +433,11 @@ alias rgsw='rg --type swift'
 alias rgtoml='rg --type toml'
 alias rgtxt='rg --type txt'
 alias rgxml='rg --type xml'
+
+# brew services
+alias bsl='brew services list'
+alias bsr='brew services run'
+alias bsst='brew services start'
+alias bssp='brew services stop'
+alias bsrs='brew services restart'
+alias bsc='brew services cleanup'
