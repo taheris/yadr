@@ -173,13 +173,14 @@ alias et='emacsclient -t'
 alias sedi="sed -i ''"
 alias digs='dig +short'
 alias htop='sudo htop'
-alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
-alias gcaf='git commit --all --amend --reuse-message HEAD'
 alias gcafpf='gcaf && git push --force'
 alias dark='osascript -e '"'"'tell application "System Events" to sleep'"'"''
 alias genpw='LC_ALL=C tr -dc "[:alpha:][:alnum:]" < /dev/urandom | head -c'
+alias en='echo -n '
 
 # git
+alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
+alias gcaf='git commit --all --amend --reuse-message HEAD'
 alias gstl='git stash list'
 alias gsts='git stash save'
 alias gstp='git stash pop'
@@ -234,6 +235,7 @@ alias drmi='docker rmi'
 alias dhi='docker history'
 alias dcr='docker create'
 alias dcp='docker cp'
+alias dc='docker-compose'
 
 # docker-machine
 alias dm='docker-machine'
@@ -247,9 +249,6 @@ alias dmu='docker-machine upgrade'
 alias dmud='docker-machine upgrade docker'
 alias dmip='docker-machine ip'
 alias dmipd='docker-machine ip docker'
-
-# docker-compose
-alias dc='docker-compose'
 
 # fleetctl
 alias fclu='fleetctl list-units'
@@ -273,6 +272,12 @@ alias -g U='| uniq '
 alias -g H='| head '
 alias -g T='| tail -n +2'
 alias -g OC='| openssl s_client -ign_eof -connect'
+alias -g W='| wc'
+alias -g WC='| wc -c'
+alias -g WL='| wc -l'
+alias -g WW='| wc -w'
+
+# redirect
 alias -g N='>/dev/null'
 alias -g ON='1>/dev/null'
 alias -g EN='2>/dev/null'
