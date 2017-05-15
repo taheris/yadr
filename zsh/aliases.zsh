@@ -364,6 +364,7 @@ alias oibr='oib --restart'
 # ripgrep
 alias rg='rg --follow'
 alias rgb='rg-boundary'
+alias rgl='rg-limit'
 alias rgt='rg --type'
 alias rgc='rg --type c'
 alias rgcmake='rg --type cmake'
