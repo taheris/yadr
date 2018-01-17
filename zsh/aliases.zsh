@@ -20,9 +20,8 @@ alias yup='yadr update-plugins'
 alias yip='yadr init-plugins'
 
 # PS
-alias psa="ps aux"
-alias psg="ps aux | grep "
-alias psr='ps aux | grep ruby'
+alias psw="ps ww"
+alias psa="ps auxww"
 
 # Moving around
 alias cdb='cd -'
@@ -353,17 +352,6 @@ alias ruw='rustup which'
 alias rudoc='rustup doc'
 alias ruh='rustup help'
 
-# ota-integration-builder
-alias oib='$HOME/src/github.com/advancedtelematic/pro/tools/ota-integration-builder/ota-builder.py'
-alias oibh='oib --help'
-alias oibpl='oib --pull'
-alias oibst='oib --start'
-alias oibsp='oib --stop'
-alias oibdr='oib --dry-run'
-alias oibt='oib --test'
-alias oibb='oib --build'
-alias oibr='oib --restart'
-
 # ripgrep
 alias rg='rg --follow'
 alias rgb='rg-boundary'
@@ -383,7 +371,6 @@ alias rgpy='rg --type py'
 alias rgrm='rg --type readme'
 alias rgrb='rg --type ruby'
 alias rgrs='rg --type rust'
-alias rgrs='rg --type rust'
 alias rgsc='rg --type scala'
 alias rgsh='rg --type sh'
 alias rgsql='rg --type sql'
@@ -391,6 +378,12 @@ alias rgsw='rg --type swift'
 alias rgtoml='rg --type toml'
 alias rgtxt='rg --type txt'
 alias rgxml='rg --type xml'
+
+# brew
+alias bi='brew install'
+alias bs='brew search'
+alias bu='brew update'
+alias bug='brew upgrade'
 
 # brew services
 alias bsl='brew services list'
