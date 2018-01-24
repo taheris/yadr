@@ -381,6 +381,7 @@ alias rgxml='rg --type xml'
 
 # brew
 alias bi='brew install'
+alias bin='brew info'
 alias bs='brew search'
 alias bu='brew update'
 alias bug='brew upgrade'
