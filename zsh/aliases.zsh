@@ -178,7 +178,7 @@ alias genpw='LC_ALL=C tr -dc "[:alpha:][:alnum:]" < /dev/urandom | head -c'
 alias en='echo -n '
 alias bc='bc --mathlib'
 alias tree2='tree -L 2'
-
+alias ensime="ctags -Re . && sbt clean ensimeConfig test:compile ensimeServerIndex"
 
 # git
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
