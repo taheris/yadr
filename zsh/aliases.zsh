@@ -59,9 +59,6 @@ if [ $MACVIM_INSTALLED -eq 0 ]; then
   alias vim="mvim -v"
 fi
 
-# mimic vim functions
-alias :q='exit'
-
 # vimrc editing
 alias ve='vim ~/.vimrc'
 
@@ -353,7 +350,7 @@ alias rudoc='rustup doc'
 alias ruh='rustup help'
 
 # ripgrep
-alias rg='rg --follow'
+alias rg='rg --sort-files --follow --max-columns 180'
 alias rgb='rg-boundary'
 alias rgl='rg-limit'
 alias rgt='rg --type'
