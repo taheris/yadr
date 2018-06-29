@@ -182,6 +182,8 @@ alias en='echo -n '
 alias bc='bc --mathlib'
 alias tree2='tree -L 2'
 alias ensime="ctags -Re . && sbt clean ensimeConfig test:compile ensimeServerIndex"
+alias locf='loc --files'
+alias locu='loc -uu'
 
 # git
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
@@ -287,6 +289,8 @@ alias -g N='>/dev/null'
 alias -g ON='1>/dev/null'
 alias -g EN='2>/dev/null'
 alias -g EO='2>&1'
+alias -g IR='</dev/urandom'
+alias -g IZ='</dev/zero'
 
 # awk
 alias -g A1='| awk '"'"'{print $1}'"'"''
