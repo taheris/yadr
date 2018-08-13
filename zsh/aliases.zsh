@@ -260,7 +260,7 @@ alias gob='go test -run=NONE -bench=.'
 alias dr='docker run --interactive --tty --rm'
 alias drr='docker run --interactive --tty --user 0:0'
 alias dru="$(printf 'docker run --interactive --tty --user %s:%s' $(id -u) $(id -g))"
-alias drc='docker run --interactive --ty --env CARGO_HOME=/cargo --volume ~/.cargo:/cargo --volume ${PWD}:/build --workdir /build'
+alias drc='docker run --interactive --tty --env CARGO_HOME=/cargo --volume ~/.cargo:/cargo --volume ${PWD}:/build --workdir /build'
 alias drnh='docker run --interactive --tty --rm --net=host'
 alias drnx='docker run --detach --restart always --name nix-docker --publish 3022:22 lnl7/nix:ssh'
 
