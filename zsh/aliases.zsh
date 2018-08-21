@@ -158,15 +158,6 @@ alias portforward='sudo ipfw add 1000 forward 127.0.0.1,3000 ip from any to any 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-# Homebrew
-alias brewu='brew update \
-  && brew upgrade \
-  && brew cask upgrade \
-  && brew cleanup \
-  && brew cask cleanup \
-  && brew prune \
-  && brew doctor'
-
 ## mine
 
 # global expansions
@@ -416,8 +407,12 @@ alias bl='brew list'
 alias bln='brew link'
 alias blno='brew link --overwrite'
 alias bs='brew search'
-alias bu='brew update'
-alias bup='brew upgrade'
+alias bu='brew update \
+  && brew upgrade \
+  && brew cask upgrade \
+  && brew cleanup \
+  && brew prune \
+  && brew doctor'
 
 # brew services
 alias bsl='brew services list'
@@ -454,6 +449,7 @@ alias kgd='kubectl get deployment'
 alias kgi='kubectl get ingress'
 alias kgj='kubectl get jobs'
 alias kgp='kubectl get pods'
+alias kgpv="kubectl get pods -o json | jq -r '.items | .[] | (.spec?.containers? | .[]? | .image?)' | sort --unique"
 alias kgn='kubectl get nodes'
 alias kgcm='kubectl get configmap'
 alias kgns='kubectl get namespaces'
