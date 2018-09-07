@@ -162,24 +162,23 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 # global expansions
 alias -g H=' --help'
-alias -g L="| less"
-alias -g N="| /dev/null"
-alias -g S='| sort'
+alias -g V=' --version'
+alias -g C='| pbcopy '
 alias -g G='| grep'
+alias -g L="| less"
+alias -g S='| sort'
+alias -g U='| uniq '
 alias -g X='| xargs '
 alias -g XI='| xargs -I{} '
-alias -g C='| pbcopy '
-alias -g S='| sort '
-alias -g U='| uniq '
 alias -g HH='| head -n 1'
 alias -g TT='| tail -n -1'
 alias -g T='| tail -n +2'
-alias -g OC='| openssl s_client -ign_eof -connect'
 alias -g CC='| wc -c'
 alias -g CL='| wc -l'
 alias -g CW='| wc -w'
 alias -g LC='| tr "[:upper:]" "[:lower:]"'
 alias -g UC='| tr "[:lower:]" "[:upper:]"'
+alias -g OC='| openssl s_client -ign_eof -connect'
 
 # redirects
 alias -g N='>/dev/null'
@@ -237,8 +236,9 @@ alias gcad='git commit --amend --date="now"'
 alias gcl='git clone'
 alias grp='git rev-parse HEAD'
 alias ghcl='github-clone'
-alias gsmur='git submodule update --recursive'
-alias gsmurr='git submodule update --recursive --remote'
+alias gsmup='git submodule update'
+alias gsmupr='git submodule update --recursive'
+alias gsmuprr='git submodule update --recursive --remote'
 
 # go
 alias gor='go run'
@@ -258,7 +258,6 @@ alias dru="$(printf 'docker run --interactive --tty --user %s:%s' $(id -u) $(id 
 alias drc='docker run --interactive --tty --env CARGO_HOME=/cargo --volume ~/.cargo:/cargo --volume ${PWD}:/build --workdir /build'
 alias drnh='docker run --interactive --tty --rm --net=host'
 alias drnx='docker run --detach --restart always --name nix-docker --publish 3022:22 lnl7/nix:ssh'
-
 alias dst='docker start'
 alias dsp='docker stop'
 alias dps='docker ps'
@@ -350,7 +349,7 @@ alias cnr='cargo +nightly run'
 # rustup
 alias ru='rustup'
 alias rus='rustup show'
-alias ruu='rustup update'
+alias ruup='rustup update'
 alias rud='rustup default'
 alias rut='rustup toolchain'
 alias rutl='rustup toolchain list'
@@ -407,7 +406,7 @@ alias bl='brew list'
 alias bln='brew link'
 alias blno='brew link --overwrite'
 alias bs='brew search'
-alias bu='brew update \
+alias bup='brew update \
   && brew upgrade \
   && brew cask upgrade \
   && brew cleanup \
@@ -620,7 +619,7 @@ alias nxwd='nix why-depends'
 alias nxcha='nix-channel --add'
 alias nxchrm='nix-channel --remove'
 alias nxchl='nix-channel --list'
-alias nxchu='nix-channel --update'
+alias nxchup='nix-channel --update'
 alias nxchrb='nix-channel --rollback'
 
 # nix-collect-garbage
