@@ -202,8 +202,7 @@ alias -g AL='| awk '"'"'{print $NF}'"'"''
 
 # misc
 alias sudo='sudo '
-alias ec='emacsclient -c'
-alias et='emacsclient -t'
+alias llh='ll -H'
 alias sedi="sed -i ''"
 alias digs='dig +short'
 alias dark='osascript -e '"'"'tell application "System Events" to sleep'"'"''
