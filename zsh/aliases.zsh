@@ -220,6 +220,45 @@ alias sql='sqlite3 -column -header -batch'
 alias gh='cd $HOME/src/github.com'
 alias ats='cd $HOME/src/github.com/advancedtelematic'
 
+# plist
+alias plp='plutil -p --'
+alias plj='plutil -convert json -r -o - --'
+alias plx='plutil -convert xml1 -o - --'
+alias plb='plutil -convert binary1 -o - --'
+
+# brew
+alias bi='brew info'
+alias bin='brew install'
+alias buin='brew uninstall'
+alias bl='brew list'
+alias bln='brew link'
+alias blno='brew link --overwrite'
+alias bs='brew search'
+alias bup='brew update \
+  && brew upgrade \
+  && brew cask upgrade \
+  && brew cleanup \
+  && brew prune \
+  && brew doctor'
+
+# brew services
+alias bsl='brew services list'
+alias bsr='brew services run'
+alias bsst='brew services start'
+alias bssp='brew services stop'
+alias bsrs='brew services restart'
+alias bsc='brew services cleanup'
+
+# brew cask
+alias bcl='brew cask list'
+alias bci='brew cask info'
+alias bcin='brew cask install'
+alias bcun='brew cask uninstall'
+alias bcrn='brew cask reinstall'
+alias bcf='brew cask fetch'
+alias bco='brew cask outdated'
+alias bcz='brew cask zap'
+
 # git
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gcaf='git commit --all --amend --reuse-message HEAD'
@@ -295,19 +334,6 @@ alias dmup='docker-machine upgrade'
 alias dmupd='docker-machine upgrade docker'
 alias dmip='docker-machine ip'
 alias dmipd='docker-machine ip docker'
-
-# fleetctl
-alias fclu='fleetctl list-units'
-alias fclm='fleetctl list-machines'
-alias fcluf='fleetctl list-unit-files'
-alias fcs='fleetctl status'
-alias fcj='fleetctl journal'
-alias fcjf='fleetctl journal -f'
-alias fcd='fleetctl destroy'
-alias fcc='fleetctl cat'
-alias fcst='fleetctl start'
-alias fcsp='fleetctl stop'
-alias fcssh='fleetctl ssh'
 
 # vagrant
 alias vb='vagrant box'
@@ -397,39 +423,6 @@ alias rgtoml='rg --type toml'
 alias rgtxt='rg --type txt'
 alias rgxml='rg --type xml'
 
-# brew
-alias bi='brew info'
-alias bin='brew install'
-alias buin='brew uninstall'
-alias bl='brew list'
-alias bln='brew link'
-alias blno='brew link --overwrite'
-alias bs='brew search'
-alias bup='brew update \
-  && brew upgrade \
-  && brew cask upgrade \
-  && brew cleanup \
-  && brew prune \
-  && brew doctor'
-
-# brew services
-alias bsl='brew services list'
-alias bsr='brew services run'
-alias bsst='brew services start'
-alias bssp='brew services stop'
-alias bsrs='brew services restart'
-alias bsc='brew services cleanup'
-
-# brew cask
-alias bcl='brew cask list'
-alias bci='brew cask info'
-alias bcin='brew cask install'
-alias bcun='brew cask uninstall'
-alias bcrn='brew cask reinstall'
-alias bcf='brew cask fetch'
-alias bco='brew cask outdated'
-alias bcz='brew cask zap'
-
 # kubernetes
 alias k='kubectl'
 alias ka='kubectl apply'
@@ -510,6 +503,7 @@ alias mk='minikube'
 alias mks='minikube status'
 alias mkst='minikube start'
 alias mksp='minikube stop'
+alias mkssh='minikube ssh'
 alias mkdel='minikube delete'
 alias mkd='minikube dashboard'
 alias mkenv='minikube docker-env'
@@ -546,12 +540,6 @@ alias lpd='lpass duplicate'
 alias lprm='lpass rm'
 alias lpep='lpass export'
 alias lpip='lpass import'
-
-# plist
-alias plp='plutil -p --'
-alias plj='plutil -convert json -r -o - --'
-alias plx='plutil -convert xml1 -o - --'
-alias plb='plutil -convert binary1 -o - --'
 
 # nix
 alias nxb='nix build'
