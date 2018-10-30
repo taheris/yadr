@@ -599,7 +599,6 @@ alias nxv='nix verify'
 alias nxvf='nix verify --file'
 alias nxvp='nix verify --file "<nixpkgs>"'
 
-alias nxrpl='nix repl'
 alias nxcn='nix cat-nar'
 alias nxcs='nix cat-store'
 alias nxas='nix add-to-store'
@@ -689,6 +688,9 @@ alias nxstrs='nix-store --restore'
 alias nxstqr='nix-store --query --references'
 alias nxstqrr='nix-store --query --referrers'
 alias nxstqt='nix-store --query --tree'
+
+# nix misc
+alias nxrpl='nix-repl'
 
 # nixops
 alias nxo='nixops'

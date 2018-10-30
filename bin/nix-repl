@@ -1,0 +1,21 @@
+#!/usr/bin/env expect
+
+proc expect_repl {} {
+  expect "nix-repl> "
+}
+
+set deploy /Users/shaun/src/github.com/advancedtelematic/ota-deploy
+
+spawn nix repl
+expect_repl
+
+send -- "pkgs = import $deploy/nix/nixpkgs {}\r"
+expect_repl
+
+send -- ":a builtins\r"
+expect_repl
+
+send -- ":a pkgs.lib\r"
+expect_repl
+
+interact
