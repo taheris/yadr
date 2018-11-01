@@ -277,6 +277,7 @@ alias ghcl='github-clone'
 alias gsmup='git submodule update'
 alias gsmupr='git submodule update --recursive'
 alias gsmuprr='git submodule update --recursive --remote'
+alias gbsu='branch=$(git rev-parse --abbrev-ref HEAD); git branch --set-upstream-to="origin/${branch}" "${branch}"'
 
 # go
 alias gor='go run'
