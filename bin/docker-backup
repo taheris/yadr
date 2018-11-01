@@ -10,7 +10,7 @@ save() {
   echo "Read ${DB_FILE}"
   local images
   while read -r image; do
-     images+=("$image"); 
+     images+=("$image");
   done <<< "$(cat ${DB_FILE})"
 
   echo "Create ${IMG_DIR}"
@@ -51,7 +51,7 @@ load() {
   echo "Read ${DB_FILE}"
   local images
   while read -r image; do
-     images+=("$image"); 
+     images+=("$image");
   done <<< "$(cat ${DB_FILE})"
 
   local name tag id
@@ -63,7 +63,7 @@ load() {
     if [[ "${id}" != "" ]]; then
       local imgPath="${IMG_DIR}/${id}.dim"
 
-      if [[ "$(docker images|grep ${id} | grep ${name} | grep ${tag})" == "" ]]; then        
+      if [[ "$(docker images|grep ${id} | grep ${name} | grep ${tag})" == "" ]]; then
         if [[ "$(docker images|grep ${id})" == "" ]]; then
           echo "[DEBUG] load ${id} ${name}:${tag} from ${imgPath}"
           docker load -i "${imgPath}"
