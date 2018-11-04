@@ -220,6 +220,15 @@ alias sql='sqlite3 -column -header -batch'
 alias gh='cd $HOME/src/github.com'
 alias ats='cd $HOME/src/github.com/advancedtelematic'
 
+# du
+alias du0='du -d 0'
+alias du1='du -d 1'
+alias du1s='du -d 1 | sort --human-numeric-sort'
+alias du2='du -d 2'
+alias du2s='du -d 2 | sort --human-numeric-sort'
+alias du3='du -d 3'
+alias du3s='du -d 3 | sort --human-numeric-sort'
+
 # plist
 alias plp='plutil -p --'
 alias plj='plutil -convert json -r -o - --'
