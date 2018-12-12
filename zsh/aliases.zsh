@@ -242,6 +242,7 @@ alias bun='brew uninstall'
 alias bl='brew list'
 alias bln='brew link'
 alias blno='brew link --overwrite'
+alias buln='brew unlink'
 alias bs='brew search'
 alias bup='brew update \
   && brew upgrade \
@@ -270,10 +271,16 @@ alias bcz='brew cask zap'
 
 # git
 alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
-alias gcaf='git commit --all --amend --reuse-message HEAD'
+alias gbsu='branch=$(git rev-parse --abbrev-ref HEAD); git branch --set-upstream-to="origin/${branch}" "${branch}"'
+alias gcl='git clone'
+alias grp='git rev-parse HEAD'
+alias ghcl='github-clone'
+
+alias gca='git commit --verbose --all --signoff'
+alias gcaf='git commit --all --amend --signoff --reuse-message HEAD'
 alias gcafpf='git commit --all --amend --reuse-message HEAD && git push --force'
-alias gcas='git commit --amend --signoff'
-alias gcaspf='git commit --amend --signoff && git push --force'
+alias gcad='git commit --amend --signoff --date="now"'
+
 alias gstl='git stash list'
 alias gsts='git stash save'
 alias gstp='git stash pop'
@@ -281,16 +288,12 @@ alias gsta='git stash apply'
 alias gstd='git stash drop'
 alias gstsh='git stash show'
 alias gstcl='git stash clear'
-alias gcad='git commit --amend --date="now"'
-alias gcl='git clone'
-alias grp='git rev-parse HEAD'
-alias ghcl='github-clone'
+
 alias gsmup='git submodule update'
 alias gsmupr='git submodule update --recursive'
 alias gsmuprr='git submodule update --recursive --remote'
 alias gsmupir='git submodule update --init --recursive'
 alias gsmupirr='git submodule update --init --recursive --remote'
-alias gbsu='branch=$(git rev-parse --abbrev-ref HEAD); git branch --set-upstream-to="origin/${branch}" "${branch}"'
 
 # go
 alias gor='go run'
@@ -310,6 +313,7 @@ alias dru="$(printf 'docker run --interactive --tty --user %s:%s' $(id -u) $(id 
 alias drc='docker run --interactive --tty --env CARGO_HOME=/cargo --volume ~/.cargo:/cargo --volume ${PWD}:/build --workdir /build'
 alias drnh='docker run --interactive --tty --rm --net=host'
 alias drnx='docker run --detach --restart always --name nix-docker --publish 3022:22 lnl7/nix:ssh'
+
 alias dst='docker start'
 alias dsp='docker stop'
 alias dps='docker ps'
