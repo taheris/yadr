@@ -217,8 +217,7 @@ alias iso='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 alias sql='sqlite3 -column -header -batch'
 
 # cd
-alias gh='cd $HOME/src/github.com'
-alias ats='cd $HOME/src/github.com/advancedtelematic'
+alias gh='cd ~/src/github.com'
 
 # du
 alias du0='du -d 0'
@@ -248,7 +247,6 @@ alias bup='brew update \
   && brew upgrade \
   && brew cask upgrade \
   && brew cleanup \
-  && brew prune \
   && brew doctor'
 
 # brew services
@@ -276,10 +274,10 @@ alias gcl='git clone'
 alias grp='git rev-parse HEAD'
 alias ghcl='github-clone'
 
-alias gca='git commit --verbose --all --signoff'
-alias gcaf='git commit --all --amend --signoff --reuse-message HEAD'
+alias gca='git commit --verbose --all'
+alias gcaf='git commit --all --amend --reuse-message HEAD'
 alias gcafpf='git commit --all --amend --reuse-message HEAD && git push --force'
-alias gcad='git commit --amend --signoff --date="now"'
+alias gcad='git commit --amend --date="now"'
 
 alias gstl='git stash list'
 alias gsts='git stash save'
@@ -375,7 +373,7 @@ alias cbr='cargo build --release'
 alias cbrm='cargo build --release --target=x86_64-unknown-linux-musl'
 alias ccln='cargo clean'
 alias cdoc='cargo doc'
-alias cn='cargo new'
+alias cnw='cargo new'
 alias ct='cargo test'
 alias cr='cargo run'
 alias cben='cargo bench'
@@ -383,11 +381,15 @@ alias cup='cargo update'
 alias cs='cargo search'
 alias cin='cargo install'
 alias cinf='cargo install --force'
+alias cun='cargo uninstall'
 alias cnb='cargo +nightly build'
 alias cnbr='cargo +nightly build --release'
-alias cnn='cargo +nightly new'
+alias cnnw='cargo +nightly new'
 alias cnt='cargo +nightly test'
 alias cnr='cargo +nightly run'
+alias cnin='cargo +nightly install'
+alias cninf='cargo +nightly install --force'
+alias cnun='cargo +nightly uninstall'
 
 # rustup
 alias ru='rustup'
