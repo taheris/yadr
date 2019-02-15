@@ -1,0 +1,22 @@
+[user]
+  name=Shaun Taheri
+  email=git@taheris.co.uk
+[merge]
+  tool = vim
+[mergetool "vim"]
+  cmd="vim -c 'diff' $MERGED"
+[push]
+  showUntrackedFiles = all
+[rerere]
+  enabled = true
+[core]
+  pager = "diff-so-fancy | less --tabs=4 -RFX"
+[color.diff-highlight]
+  oldNormal = "red"
+  oldHighlight = "red 52"
+  newNormal = "green"
+  newHighlight = "green 22"
+[rebase]
+  autostash=true
+[stash]
+  showPatch=true
