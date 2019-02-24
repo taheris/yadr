@@ -832,3 +832,38 @@ alias nxoipd='nixops import --deployment'
 # nix misc
 alias -g ST=' --show-trace'
 alias -g DR=' --dry-run'
+
+# step certificates
+alias stcc='step certificate create'
+alias stcs='step certificate sign'
+alias stcb='step certificate bundle'
+alias stci='step certificate inspect'
+alias stcv='step certificate verify'
+alias stcf='step certificate fingerprint'
+alias stck='step certificate key'
+alias stcin='step certificate install'
+alias stcun='step certificate uninstall'
+
+# step ca
+alias stcai='step ca init'
+alias stcat='step ca token'
+alias stcac='step ca certificate'
+alias stcab='step ca bootstrap'
+alias stcas='step ca sign'
+alias stcar='step ca root'
+alias stcars='step ca roots'
+alias stcarn='step ca renew'
+alias stcap='step ca provisioner'
+alias stcah='step ca health'
+alias stcaf='step ca federation'
+
+# step crypto
+alias stcrf='step crypto jose format'
+alias stcrh='step crypto hash'
+alias stcrk='step crypto key'
+alias stcrkp='step crypto keypair'
+alias stcrcp='step crypto change-pass'
+alias stjwk='step crypto jwk'
+alias stjwe='step crypto jwe'
+alias stjws='step crypto jws'
+alias stotp='step crypto otp'
