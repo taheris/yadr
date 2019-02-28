@@ -165,6 +165,8 @@ alias -g H=' --help'
 alias -g V=' --version'
 alias -g C='| pbcopy '
 alias -g G='| grep'
+alias -g EG='| egrep'
+alias -g FG='| fgrep'
 alias -g L="| less"
 alias -g S='| sort'
 alias -g U='| uniq '
@@ -867,3 +869,12 @@ alias stjwk='step crypto jwk'
 alias stjwe='step crypto jwe'
 alias stjws='step crypto jws'
 alias stotp='step crypto otp'
+
+# gron
+alias gr='gron'
+alias gru='gron --ungron'
+alias grns='gron --no-sort'
+
+alias -g GR='| gron'
+alias -g GRG='| gron | grep'
+alias -g GRU='| gron --ungron'
