@@ -10,10 +10,24 @@ bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
 
+unbind p
+bind p paste-buffer
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
+bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle \; send -X begin-selection
+
 unbind r
 bind r move-window -r
-bind R source-file ~/.tmux.conf \; display "Reloaded!"
 
 set-option -g status-position top
 set -qg status-left "#{?client_prefix,#[fg=$_POWERLINE_SESSION_PREFIX_FG]#[bg=$_POWERLINE_SESSION_PREFIX_BG]#[$_POWERLINE_SESSION_PREFIX_ATTR],#[fg=$_POWERLINE_SESSION_FG]#[bg=$_POWERLINE_SESSION_BG]#[$_POWERLINE_SESSION_ATTR]} #S #{?client_prefix,#[fg=$_POWERLINE_SESSION_PREFIX_BG],#[fg=$_POWERLINE_SESSION_BG]}#[bg=$_POWERLINE_BACKGROUND_BG]#[nobold]$_POWERLINE_LEFT_HARD_DIVIDER#(env $POWERLINE_COMMAND $POWERLINE_COMMAND_ARGS tmux left --width=`tmux display -p '#'{client_width}'` -R width_adjust=`tmux show-options -g status-right-length | cut -d' ' -f2` -R pane_id=\"`tmux display -p '#''D'`\")"
 set -g window-status-format "#[$_POWERLINE_WINDOW_COLOR]$_POWERLINE_LEFT_HARD_DIVIDER_SPACES#I#{?window_flags,#F, } #[$_POWERLINE_WINDOW_DIVIDER_COLOR]$_POWERLINE_LEFT_SOFT_DIVIDER#[default]#W $_POWERLINE_LEFT_HARD_DIVIDER_SPACES"
+
+set -g @tpm_plugins '\
+  tmux-plugins/tpm \
+  tmux-plugins/tmux-sensible \
+  tmux-plugins/tmux-resurrect \
+  tmux-plugins/tmux-copycat \
+  tmux-plugins/tmux-open \
+  '
+run '~/.tmux/plugins/tpm/tpm'
