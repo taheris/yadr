@@ -217,7 +217,7 @@ alias locu='loc -uu'
 alias t2='tree -L 2'
 alias iso='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 alias sql='sqlite3 -column -header -batch'
-alias fd='fd --hidden --no-ignore --follow'
+alias fdh='fd --hidden --no-ignore --follow'
 
 # cd
 alias gh='cd ~/src/github.com'
