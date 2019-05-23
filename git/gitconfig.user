@@ -7,6 +7,8 @@
   cmd="vim -c 'diff' $MERGED"
 [push]
   showUntrackedFiles = all
+[credential]
+  helper = osxkeychain
 [rerere]
   enabled = true
 [core]
