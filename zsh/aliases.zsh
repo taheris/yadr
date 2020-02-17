@@ -219,9 +219,6 @@ alias iso='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 alias sql='sqlite3 -column -header -batch'
 alias fdh='fd --hidden --no-ignore --follow'
 
-# cd
-alias gh='cd ~/src/github.com'
-
 # du
 alias du0='du -d 0'
 alias du1='du -d 1'
@@ -277,6 +274,7 @@ alias gcl='git clone'
 alias grp='git rev-parse HEAD'
 alias ghcl='github-clone'
 alias gdw='git diff --ignore-all-space'
+alias glgff='git log --format=full'
 
 alias gca='git commit --verbose --all'
 alias gcaf='git commit --all --amend --reuse-message HEAD'
@@ -471,6 +469,9 @@ alias cupp='cargo update --package'
 alias cs='cargo search'
 alias cin='cargo install'
 alias cinf='cargo install --force'
+alias cinp='cargo install --path'
+alias cinpd='cargo install --path .'
+alias cinpdf='cargo install --path . --force'
 alias cun='cargo uninstall'
 alias cnb='cargo +nightly build'
 alias cnbr='cargo +nightly build --release'
@@ -480,6 +481,9 @@ alias cnr='cargo +nightly run'
 alias cnin='cargo +nightly install'
 alias cninf='cargo +nightly install --force'
 alias cnun='cargo +nightly uninstall'
+alias cx='cargo expand'
+alias cxb='cargo expand --bin'
+alias cxl='cargo expand --lib'
 
 # rustup
 alias ru='rustup'
