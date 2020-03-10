@@ -1,6 +1,8 @@
 [user]
   name=Shaun Taheri
-  email=git@taheris.co.uk
+  email=gpg@taheris.net
+[commit]
+  gpgsign = true
 [merge]
   tool = vim
 [mergetool "vim"]

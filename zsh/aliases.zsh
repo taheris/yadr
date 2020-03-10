@@ -228,6 +228,14 @@ alias du2s='du -d 2 | sort --human-numeric-sort'
 alias du3='du -d 3'
 alias du3s='du -d 3 | sort --human-numeric-sort'
 
+# fd
+alias fdf='fd --type file'
+alias fdfh='fd --type file --hidden'
+alias fdd='fd --type directory'
+alias fdl='fd --type symlink'
+alias fdx='fd --type executable'
+alias fde='fd --type empty'
+
 # plist
 alias plp='plutil -p --'
 alias plj='plutil -convert json -r -o - --'
