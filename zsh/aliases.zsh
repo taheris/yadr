@@ -293,16 +293,16 @@ alias dm='doom'
 alias dmb='doom build'
 alias dmd='doom doctor'
 alias dme='doom env'
+alias dmh='doom help'
 alias dmi='doom info'
 alias dmp='doom purge'
 alias dmv='doom version'
 alias dmin='doom install'
 alias dmsy='doom sync'
-alias dmud='doom update'
-alias dmug='doom upgrade'
-alias dmup='doom upgrade \
-  && doom update \
-  && doom sync'
+alias dmsyp='doom sync --prune'
+alias dmsyu='doom sync -u'
+alias dmup='doom upgrade'
+alias dmupp='doom upgrade --packages'
 
 # git
 alias gcl='git clone'
