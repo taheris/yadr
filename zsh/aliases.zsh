@@ -257,16 +257,22 @@ alias plb='plutil -convert binary1 -o - --'
 # brew
 alias bi='brew info'
 alias bin='brew install'
+alias binc='brew install --cask'
 alias bun='brew uninstall'
+alias bunc='brew uninstall --cask'
 alias brin='brew reinstall'
+alias brinc='brew reinstall --cask'
 alias bl='brew list'
+alias blc='brew list --cask'
 alias bln='brew link'
 alias blno='brew link --overwrite'
 alias buln='brew unlink'
+alias bo='brew outdated'
+alias boc='brew outdated --cask'
 alias bs='brew search'
 alias bup='brew update \
   && brew upgrade \
-  && brew cask upgrade \
+  && brew upgrade --cask \
   && brew cleanup \
   && brew doctor'
 
@@ -279,13 +285,8 @@ alias bsrs='brew services restart'
 alias bsc='brew services cleanup'
 
 # brew cask
-alias bcl='brew cask list'
 alias bci='brew cask info'
-alias bcin='brew cask install'
-alias bcun='brew cask uninstall'
-alias bcrin='brew cask reinstall'
 alias bcf='brew cask fetch'
-alias bco='brew cask outdated'
 alias bcz='brew cask zap'
 
 # doom
@@ -558,8 +559,8 @@ alias ruspd='rustup set profile default'
 alias ruspc='rustup set profile complete'
 
 # ripgrep
-alias rg='rg --sort-files --follow --max-columns 180'
-alias rgi='rg --sort-files --follow --max-columns 180 --no-ignore'
+alias rg='rg --sort-files --follow --no-messages --max-columns 180'
+alias rgi='rg --sort-files --follow --no-messages --max-columns 180 --no-ignore'
 alias rgb='rg-boundary'
 alias rgl='rg-limit'
 alias rgt='rg --type'
